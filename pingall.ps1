@@ -1,8 +1,11 @@
-﻿# Single column of just IP address should be .txt file
-$input = "C:\Users\M9266100\Downloads\shortlist.csv"  
+#Initialize a variable the defines where the list of hostnames will be pulled from
+$input = "PathToFile"  
 
+#Initialize a variable that pulls info from the file defined in the variable above
 
 $ServerName = Get-Content $input
+
+#Perform a connection test and write to the host reporting either a successful test or a failure
 
 foreach ($Server in $ServerName) {
 
@@ -16,5 +19,7 @@ foreach ($Server in $ServerName) {
 
                 }   
 
-}$result; Write-Host "$result.count machines queried"
+
+
+}
 pause   
