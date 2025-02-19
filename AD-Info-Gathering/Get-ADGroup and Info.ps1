@@ -1,0 +1,1 @@
+﻿Get-ADgroup -filter * -Properties info | select SamAccountName, info | Format-List | Out-File -FilePath "C:\Users\M9266100A\Desktop\Groups_And_Info.txt.txt"
